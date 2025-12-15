@@ -36,7 +36,7 @@ function UpdateUi(arr) {
     });
   });
 }
-fetch("https://jsonplaceholder.typicode.com/photos")
+fetch("https://jsonplaceholder.typicode.com/todos")
   .then((res) => res.json())
   .then((data) => UpdateUi(data))
   .catch((err) => console.log(err));
