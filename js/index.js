@@ -19,11 +19,11 @@ SunEl.addEventListener("click", () => {
 function UpdateUi(arr) {
   Ul.innerHTML = "";
   arr.forEach((user, index) => {
-    let { name, title, body, email} = user;
+    let { name, title, body, email } = user;
     Ul.innerHTML += `
       <li data-index="${index}">
         ${email}
-        <button class="delete-btn" style="margin-left: 10px; cursor: pointer;">X</button>
+        <button class="delete-btn" style="margin-left: 10px; cursor: pointer; background-color: transparent; color: var(--color-black);">X</button>
       </li>
     `;
   });
