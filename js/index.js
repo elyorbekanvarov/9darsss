@@ -19,10 +19,10 @@ SunEl.addEventListener("click", () => {
 function UpdateUi(arr) {
   Ul.innerHTML = "";
   arr.forEach((user, index) => {
-    let { name, title } = user;
+    let { name, title, body, email} = user;
     Ul.innerHTML += `
       <li data-index="${index}">
-        ${title}
+        ${email}
         <button class="delete-btn" style="margin-left: 10px; cursor: pointer;">X</button>
       </li>
     `;
@@ -36,7 +36,7 @@ function UpdateUi(arr) {
     });
   });
 }
-fetch("https://jsonplaceholder.typicode.com/todos")
+fetch("https://jsonplaceholder.typicode.com/comments")
   .then((res) => res.json())
   .then((data) => UpdateUi(data))
   .catch((err) => console.log(err));
